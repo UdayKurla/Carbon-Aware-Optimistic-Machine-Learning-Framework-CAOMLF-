@@ -21,7 +21,6 @@ Project-UI
 │
 ├── app.py
 ├── Emission_Dataset.csv
-├── requirements.txt
 ├── README.md
 └── static
     └── index.html
@@ -105,78 +104,3 @@ http://127.0.0.1:5000
 The application interface will load successfully.
 
 ---
-
-## API Endpoint
-
-**POST** `/api/recommendations`
-
-Full URL:
-
-```
-http://127.0.0.1:5000/api/recommendations
-```
-
-### Sample JSON Request
-
-```json
-{
-  "dataType": "Image",
-  "numSamples": 10000,
-  "priority": "balanced",
-  "numFeatures": 3,
-  "mlTask": "Image Classification"
-}
-```
-
----
-
-## Supported Tasks
-
-* Image Classification
-* Text Classification
-* Tabular Classification
-
----
-
-## Priority Options
-
-* balanced
-* accuracy_70
-* accuracy_80
-* carbon_70
-* carbon_80
-
----
-
-## Common Issues
-
-### Application stops immediately
-
-* Check if `Emission_Dataset.csv` exists
-* Check if required columns are present
-
-### ModuleNotFoundError
-
-Run:
-
-```
-pip install -r requirements.txt
-```
-
-### Port already in use
-
-Modify the last line in `app.py`:
-
-```
-app.run(debug=True, port=5001)
-```
-
-Then open:
-
-```
-http://127.0.0.1:5001
-```
-
----
-
-Your README is now properly formatted for GitHub.
