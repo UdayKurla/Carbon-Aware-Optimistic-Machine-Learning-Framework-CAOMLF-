@@ -1,20 +1,180 @@
-Step 1. Download Project folder
-  Download the project folder from Google Drive.
-Open terminal or command prompt inside the project folder.
-Step 2. Create and Activate Virtual Environment
-  Windows:
-    python -m venv venv
-    venv\Scripts\activate
-  Mac or Linux:
-    python3 -m venv venv
-    source venv/bin/activate
-Step 3. Install Required Libraries
-  Run:
-    pip install flask pandas numpy scikit-learn
-Step 4. Run the Application
-  Run:
-  python app.py
-In output find: Running on http://127.0.0.1:5000
-Step 6. Open Application
-  Open browser and go to:
+Below is a clean, properly formatted README.md file ready for GitHub.
+
+You can copy and paste this directly into README.md.
+
+---
+
+# Carbon Aware ML Model Recommendation System
+
+## Project Overview
+
+This application recommends machine learning models based on predicted accuracy and carbon emissions.
+
+It trains specialized Random Forest meta models and provides ranked recommendations using a Flask API.
+
+---
+
+## Project Structure
+
+```
+Project-UI
+│
+├── app.py
+├── Emission_Dataset.csv
+├── requirements.txt
+├── README.md
+└── static
+    └── index.html
+```
+
+---
+
+## System Requirements
+
+* Python 3.8 or higher
+* pip
+
+---
+
+## Step 1. Download Project Folder
+
+Download the complete project folder from Google Drive.
+
+Extract it if it is in ZIP format.
+
+Open Command Prompt or Terminal inside the project folder.
+
+---
+
+## Step 2. Create and Activate Virtual Environment
+
+### Windows
+
+```
+python -m venv venv
+venv\Scripts\activate
+```
+
+### Mac or Linux
+
+```
+python3 -m venv venv
+source venv/bin/activate
+```
+
+---
+
+## Step 3. Install Required Libraries
+
+```
+pip install flask pandas numpy scikit-learn
+```
+
+Or if using requirements file:
+
+```
+pip install -r requirements.txt
+```
+
+---
+
+## Step 4. Run the Application
+
+```
+python app.py
+```
+
+After running, you should see:
+
+```
+Running on http://127.0.0.1:5000
+```
+
+---
+
+## Step 5. Open the Application
+
+Open your web browser and go to:
+
+```
 http://127.0.0.1:5000
+```
+
+The application interface will load successfully.
+
+---
+
+## API Endpoint
+
+**POST** `/api/recommendations`
+
+Full URL:
+
+```
+http://127.0.0.1:5000/api/recommendations
+```
+
+### Sample JSON Request
+
+```json
+{
+  "dataType": "Image",
+  "numSamples": 10000,
+  "priority": "balanced",
+  "numFeatures": 3,
+  "mlTask": "Image Classification"
+}
+```
+
+---
+
+## Supported Tasks
+
+* Image Classification
+* Text Classification
+* Tabular Classification
+
+---
+
+## Priority Options
+
+* balanced
+* accuracy_70
+* accuracy_80
+* carbon_70
+* carbon_80
+
+---
+
+## Common Issues
+
+### Application stops immediately
+
+* Check if `Emission_Dataset.csv` exists
+* Check if required columns are present
+
+### ModuleNotFoundError
+
+Run:
+
+```
+pip install -r requirements.txt
+```
+
+### Port already in use
+
+Modify the last line in `app.py`:
+
+```
+app.run(debug=True, port=5001)
+```
+
+Then open:
+
+```
+http://127.0.0.1:5001
+```
+
+---
+
+Your README is now properly formatted for GitHub.
