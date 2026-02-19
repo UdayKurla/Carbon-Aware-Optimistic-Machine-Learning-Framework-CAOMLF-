@@ -70,13 +70,6 @@ source venv/bin/activate
 ```
 pip install flask pandas numpy scikit-learn
 ```
-
-Or if using requirements file:
-
-```
-pip install -r requirements.txt
-```
-
 ---
 
 ## Step 4. Run the Application
