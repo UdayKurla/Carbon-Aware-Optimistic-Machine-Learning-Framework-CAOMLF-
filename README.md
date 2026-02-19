@@ -1,7 +1,3 @@
-Below is a clean, properly formatted README.md file ready for GitHub.
-
-You can copy and paste this directly into README.md.
-
 ---
 
 # Carbon Aware ML Model Recommendation System
